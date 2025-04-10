@@ -1,0 +1,87 @@
+/* In assets/css/custom.scss */
+/* Further attempt to fix spacing and bullet indentation */
+
+/* Adjust '.page-content' selector below if needed based on your theme */
+.page-content {
+    /* Base font settings - uncomment and adjust if desired */
+    /* font-family: 'Lato', sans-serif; */
+    /* line-height: 1.7; */
+    /* color: #333; */
+  }
+  
+  /* --- Color Adjustments --- */
+  .page-content h2 { /* Section Titles */
+    color: #2c3e50;
+    border-bottom-color: #cccccc; /* Gray underline */
+  }
+  .page-content h3 { /* Job/Degree Titles */
+    color: #34495e;
+    font-weight: 600;
+  }
+  .page-content a { /* Links */
+    color: #3498db;
+  }
+  .page-content a:hover {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  /* --- Spacing & Layout Adjustments --- */
+  
+  /* Style Section Headings (H2) */
+  .page-content h2 {
+    /* REDUCED: Less space above section heading */
+    margin-top: 1.5em;
+    margin-bottom: 1em; /* Slightly reduced space below heading */
+    padding-bottom: 0.4em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-top: none;
+    padding-top: 0;
+  }
+  /* Keep removing top margin for the very first H2 */
+  .page-content h2:first-of-type {
+    margin-top: 0;
+  }
+  
+  /* Space BETWEEN Job Title (h3) and Company/Location/Date (p) */
+  .page-content h3 {
+     margin-bottom: 0.1em;
+  }
+  .page-content h3 + p { /* Company/Location/Date line */
+     margin-top: 0.1em;
+     margin-bottom: 0.8em; /* Space before bullet points start */
+     font-style: italic;
+     color: #7f8c8d;
+     font-size: 0.9em;
+  }
+  
+  /* --- Bullet Point Alignment & Spacing --- */
+  .page-content ul {
+      /* Remove default browser padding */
+      padding-left: 0;
+      /* Control list style type if needed */
+      list-style-type: disc; /* Standard disc */
+      /* Default space after a list */
+      margin-bottom: 1.5em;
+   }
+  
+  .page-content li {
+      /* Control indent using margin on the list item itself */
+      margin-left: 20px; /* Adjust this value (e.g., 18px, 22px) */
+      /* Other list item styling */
+      margin-bottom: 0.5em; /* Space between bullets */
+      line-height: 1.6;
+      color: #333;
+   }
+  
+   /* Override bottom margin specifically for lists within job entries to control space BETWEEN jobs */
+   .page-content h3 + p + ul {
+      margin-bottom: 1.8em; /* Adjust this value for space between job entries */
+   }
+  
+  
+  /* --- REMOVE Horizontal Rule --- */
+  hr {
+    display: none; /* Hide the horizontal rule completely */
+  }

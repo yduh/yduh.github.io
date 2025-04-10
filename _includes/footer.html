@@ -1,6 +1,11 @@
 <footer class="footer">
+  {% comment %} This loop displays the social icons (LinkedIn, Email, etc.) {% endcomment %}
   {% for item in site.data.settings.social %}
     <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
   {% endfor %}
-  <div class="footer-description"><a href="{{ site.github.url }}/">{{ site.title }} | {{ site.description }} by {{ site.author }}</a></div>
+
+  {% comment %} This div displays the copyright notice {% endcomment %}
+  <div class="footer-description">
+    &copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}. All rights reserved.
+  </div>
 </footer>

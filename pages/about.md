@@ -3,13 +3,16 @@ layout: page
 title: About me
 permalink: /about
 ---
+![Description of image](../assets/img/profile.jpg){: width="300px" }
 
-Hi, I’m Yiting — a physicist-turned-data scientist with a curious mind and a passion for solving complex problems. I earned my PhD in Physics on full scholarships, and since then, I’ve worked across academia and industry in the US, Switzerland, and now the Netherlands.
+👋 Hi, I’m Yiting — a physicist-turned-data scientist with a curious mind and a love of exploration. I earned my PhD in Physics on full scholarships, and have worked across academia and industry in the US, Switzerland, France, Japan, and now the Netherlands.
 
-My path into data science began with a love for uncovering patterns and making smarter decisions through data. Today, I work in tech, focusing on experimentation, machine learning, and product insights that drive impact.
+💻 My path into data science grew from a desire to find structure in complexity and use data to drive better decisions. Today, I work in tech at Booking.com, focusing on experimentation, machine learning, and insights that create business impact.
 
-Outside of work, you’ll often find me climbing, skiing, or exploring the outdoors — especially in the Alps. I believe learning is lifelong, and I enjoy sharing what I know to help others grow.
+💥 During my days as a physicist, one of the most memorable experiences was working at CERN — where we smashed particles together to recreate tiny echoes of the Big Bang, in hopes of understanding the building blocks of our universe.
 
-This site is where I share my projects, thoughts, and favorite resources in data, science, and learning. Thanks for visiting!
+⛰️ Outside of work, I find joy in movement and nature — climbing, skiing, and exploring mountain trails, always on the lookout for new ways to experience this ever-changing world. I believe learning happens everywhere, and sharing is my way of giving back.
 
-#Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused publishing platform for your publication site or blog. You can find everything you need to get started under documentation. For more information on how to install and use this theme, check out [the documentation]({{ site.github.url }}{% post_url 2016-10-10-getting-started %}).
+🖊️ This site is where I collect and share reflections, learning, and resources on data and science.
+
+> “In the end, we’ll all become stories.” — Margaret Atwood

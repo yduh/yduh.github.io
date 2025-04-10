@@ -7,13 +7,41 @@ paginate:            5
 markdown:            kramdown
 highlighter:         rouge
 permalink:           /:title
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "Yiting D"
-description:	       "copyright reserved"
-author:              "2025"
+title:               "Yiting DUH"
+description:         "Personal website for professional profile and technical writings" # You might want a more descriptive description here for SEO
+
+# Author details (used for sidebar, potentially other theme elements)
+author:
+  name             : "Yiting DUH"
+  avatar           : "/assets/images/profile.jpg" # <<< IMPORTANT: Replace 'your-profile-photo.jpg' with your actual photo filename
+  bio              : "Data Scientist. Physicist background." # Optional: A short bio for the sidebar
+#  location         : "Amsterdam, Netherlands" # Optional
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope" # Font Awesome icon class
+      url: "mailto:yitingduh@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin" # Font Awesome icon class
+      url: "https://www.linkedin.com/in/yiting-duh/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github" # Font Awesome icon class
+      url: "https://github.com/yduh"
+    # Add other links like Medium, Google Scholar etc. if desired, following the same pattern
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
 #  path: rss-feed.xml
+
+# --- Theme Specific Settings ---
+# Add any theme-specific settings below this line if your theme requires them.
+# Check your theme's documentation. Example might include:
+# logo: "/assets/images/logo.png"
+# footer_links: ... (if not handled by author links)
+# search: true / false
