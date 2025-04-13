@@ -1,7 +1,38 @@
 <!doctype html>
-<html>
-  {% include head.html %}
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% comment %} Jekyll SEO Tag plugin outputs meta tags {% endcomment %}
+    {% seo title=false %}
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+    {% comment %} Link to main CSS file - Adjust path if needed {% endcomment %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+    {% comment %} ** ADDED: Link to Font Awesome for Icons ** {% endcomment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% comment %} Add links to favicons etc. here if needed {% endcomment %}
+
+    {% comment %} Google Analytics Snippet - Added only in production environment {% endcomment %}
+    {% if jekyll.environment == 'production' %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-K20X5VQLMG"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-K20X5VQLMG');
+      </script>
+    {% endif %}
+
+  </head>
+
   <body>
+
     <div class="container">
       {% include header.html %}
       <div class="content-wrapper">
@@ -9,5 +40,7 @@
       </div>
       {% include footer.html %}
     </div>
+
   </body>
+
 </html>

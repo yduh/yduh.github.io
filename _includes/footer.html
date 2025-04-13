@@ -1,7 +1,14 @@
 <footer class="footer">
   {% comment %} This loop displays the social icons (LinkedIn, Email, etc.) {% endcomment %}
   {% for item in site.data.settings.social %}
-    <a href="{{ item.link }}" class="menu-link" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
+    {% assign icon_prefix = "fas" %} {% comment %} Default to solid style {% endcomment %}
+    {% if item.icon == 'linkedin' or item.icon == 'github' or item.icon == 'twitter' or item.icon == 'facebook' or item.icon == 'instagram' %}
+      {% assign icon_prefix = "fab" %} {% comment %} Use brands style prefix {% endcomment %}
+    {% endif %}
+
+    <a href="{{ item.link }}" class="menu-link" target="_blank" title="{{ item.label | default: item.icon | capitalize }}">
+        <i class="{{ icon_prefix }} fa-fw fa-{{ item.icon }}" aria-hidden="true"></i>
+    </a>
   {% endfor %}
 
   {% comment %} This div displays the copyright notice {% endcomment %}
